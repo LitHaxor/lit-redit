@@ -1,4 +1,4 @@
-import { __prod__ } from "./constants";
+import { DB_URL, __prod__ } from "./constants";
 import { Posts } from "./entities/Posts";
 import { MikroORM } from "@mikro-orm/core";
 import path from "path";
@@ -10,7 +10,7 @@ export default {
     },
     entities:[Posts,User],
     type:'postgresql',
-    dbName: 'litreddit',
-    password: 'admin',
+    clientUrl:DB_URL,
+    dbName: "litreddit",
     debug: !__prod__,
 } as Parameters<typeof MikroORM.init>[0];

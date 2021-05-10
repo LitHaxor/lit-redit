@@ -16,6 +16,7 @@ const main = async ()=>{
     
     // express 
 
+    
     const app = express()
 
     // apollo server
@@ -33,6 +34,7 @@ const main = async ()=>{
 
     apolloServer.applyMiddleware({app})
 
+    
     // routes
     app.get('/', (_,res)=>{
         res.status(200).json({

@@ -4,15 +4,12 @@
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc && node .",
-    "dev": "nodemon src/index.ts",
-    "migrate": "mikro-orm migration:create"
-  },
-  "devDependencies": {
-    "@types/node": "^15.0.2",
-    "nodemon": "^2.0.7",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
+    "start:": "node .",
+    "build":"tsc",
+    "dev":"nodemon node . ",
+    "ts-dev": "nodemon -L src/index.ts",
+    "migrate": "mikro-orm migration:create",
+    "watch":"tsc -w"
   },
   "dependencies": {
     "@mikro-orm/cli": "^4.5.4",
@@ -25,7 +22,11 @@
     "graphql": "^15.5.0",
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "^1.1.1",
+    "typescript": "^4.2.4",
+    "@types/node": "^15.0.2",
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1"
   },
   "mikro-orm": {
     "useTsNode": true,
