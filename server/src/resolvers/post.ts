@@ -7,7 +7,7 @@ export class PostResolver{
     posts(
         @Ctx() {em}: MyContext
     ):Promise<Posts[]>
-    {
+    { 
         return em.find(Posts,{})
     }
     // get one
